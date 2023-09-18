@@ -3,7 +3,6 @@
 html {
   font-size: 62.5%;
 }
-
 body {
   box-sizing: border-box;
   margin: 0;
@@ -17,41 +16,24 @@ body {
   50%{background-position:100% 50%}
   100%{background-position:0% 50%}
 }
-
-.slider-wrapper {
-  width: 60%;
+.slider {
   margin: 5rem auto;
+  padding: 3rem;
   background: rgba( 255, 255, 255, 0.2 );
   box-shadow: 0 .8rem 3.2rem 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur( .75rem );
   -webkit-backdrop-filter: blur( .75rem );
   border-radius: 1rem;
-}
-
-.slider {
-
-  align-items: center;
   width: 80rem;
-  text-align: center;
   overflow: hidden;
-  padding: 2.5rem;
-  margin: 0 auto;
-
 }
 .slides {
   display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-}
-.slides::-webkit-scrollbar {
-  display: none;
+  width: 100%;
 }
 .slide {
-  scroll-snap-align: start;
   flex-shrink: 0;
-  width: 80rem;
+  width: 100%;
   height: 50rem;
   transform-origin: center center;
   transform: scale(1);
@@ -60,10 +42,12 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  transition: all 2s ease-in-out;
 }
 
 .text-btn-wrapper {
@@ -71,30 +55,10 @@ img {
   justify-content: space-between;
 }
 
-/* сейчас работаю над стилем кнопок */
-
 .slider_btns {
   display: flex;
   gap: 2rem;
   margin-top: 2.5rem;
-}
-
-.slide_link {
-  cursor: pointer;
-  display: block;
-  padding: 1.5rem;
-}
-
-.slider-btn {
-  width: 1.5rem;
-  height: 1.5rem;
-  border: .4rem solid rgb(201, 201, 201);
-  border-radius: 50%;
-  background-color: rgb(201, 201, 201);
-}
-.slider-btn:hover {
-  border-color: #fff;
-  background-color: #fff;
 }
 
 .text-wrapper {
@@ -105,36 +69,54 @@ img {
 }
 
 label {
-  width: 3rem;
-  height: 3rem;
-  background-color: #fff;
+  cursor: pointer;
+  width: 2.1rem;
+  height: 2.1rem;
+  border: .4rem solid #bebebe;
+  /* background-color: #fff; */
+  border-radius: 50%;
 }
 
 input {
   display: none;
+  transition: all 2s ease-in-out;
 }
 
 .text {
   display: none;
-  width: 400px;
+  width: auto;
 }
 
+/* text switcher */
 .a:checked ~ .text-btn-wrapper .text-wrapper .text1 {
   display: inline;
 }
-
 .b:checked ~ .text-btn-wrapper .text-wrapper .text2 {
   display: inline;
 }
-
 .c:checked ~ .text-btn-wrapper .text-wrapper .text3 {
   display: inline;
 }
-
 .d:checked ~ .text-btn-wrapper .text-wrapper .text4 {
   display: inline;
 }
-
 .e:checked ~ .text-btn-wrapper .text-wrapper .text5 {
   display: inline;
+}
+
+/* img switcher switcher */
+#btn1:checked ~ .slides {
+  transform: translateX(0);
+}
+#btn2:checked ~ .slides {
+  transform: translateX(-100%);
+}
+#btn3:checked ~ .slides {
+  transform: translateX(-200%);
+}
+#btn4:checked ~ .slides {
+  transform: translateX(-300%);
+}
+#btn5:checked ~ .slides {
+  transform: translateX(-400%);
 }
