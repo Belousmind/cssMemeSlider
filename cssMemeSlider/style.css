@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
+
+html {
+  font-size: 62.5%;
+}
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(270deg, #64e8de, #8464eb);
+  background-size: 400% 400%;
+  animation: gradientAnimation 12s ease infinite;
+}
+@keyframes gradientAnimation {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+.slider {
+  background: rgba( 255, 255, 255, 0.2 );
+  box-shadow: 0 .8rem 3.2rem 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( .75rem );
+  -webkit-backdrop-filter: blur( .75rem );
+  border-radius: 1rem;
+  overflow: hidden;
+  width: 80rem;
+  margin: 5rem auto;
+  padding: 3rem;
+}
+.slides {
+  display: flex;
+}
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 100%;
+  height: 50rem;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: all 2s ease-in-out;
+}
+.text-btn-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.slider_btns {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 2.5rem;
+}
+.text-wrapper {
+  display: flex;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 2.4rem;
+  color: aliceblue;
+}
+label {
+  cursor: pointer;
+  padding: .4rem;
+}
+.fake-btn {
+  display: block;
+  width: 2.1rem;
+  height: 2.1rem;
+  border: .4rem solid #fff;
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 0.6;
+  transition: all 0.3s ease-out;
+}
+label:hover .fake-btn {
+  opacity: 1;
+}
+input {
+  display: none;
+}
+.text {
+  display: none;
+  width: auto;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* text switcher */
+.a:checked ~ .text-btn-wrapper .text-wrapper .text1 {
+  display: inline;
+  animation: fade-in .4s ease-out;
+}
+.b:checked ~ .text-btn-wrapper .text-wrapper .text2 {
+  display: inline;
+  animation: fade-in .4s ease-out;
+}
+.c:checked ~ .text-btn-wrapper .text-wrapper .text3 {
+  display: inline;
+  animation: fade-in .4s ease-out;
+}
+.d:checked ~ .text-btn-wrapper .text-wrapper .text4 {
+  display: inline;
+  animation: fade-in .4s ease-out;
+}
+.e:checked ~ .text-btn-wrapper .text-wrapper .text5 {
+  display: inline;
+  animation: fade-in .4s ease-out;
+}
+
+/* img switcher switcher */
+#btn1:checked ~ .slides {
+  transform: translateX(0);
+  transition: all 0.4s ease-out;
+}
+#btn2:checked ~ .slides {
+  transform: translateX(-100%);
+  transition: all 0.4s ease-out;
+}
+#btn3:checked ~ .slides {
+  transform: translateX(-200%);
+  transition: all 0.4s ease-out;
+}
+#btn4:checked ~ .slides {
+  transform: translateX(-300%);
+  transition: all 0.4s ease-out;
+}
+#btn5:checked ~ .slides {
+  transform: translateX(-400%);
+  transition: all 0.4s ease-out;
+}
+
+/* button switcher */
+.a:checked ~ .text-btn-wrapper .slider_btns label .fake1{
+  background-color: transparent;
+}
+.b:checked ~ .text-btn-wrapper .slider_btns label .fake2{
+  background-color: transparent;
+}
+.c:checked ~ .text-btn-wrapper .slider_btns label .fake3{
+  background-color: transparent;
+}
+.d:checked ~ .text-btn-wrapper .slider_btns label .fake4{
+  background-color: transparent;
+}
+.e:checked ~ .text-btn-wrapper .slider_btns label .fake5{
+  background-color: transparent;
+}
+
+@media (max-width: 890px) {
+  .slider {
+    width: 38rem;
+  }
+  .slide{
+    height: 24rem;
+  }
+  .text-btn-wrapper {
+    flex-direction: column-reverse;
+  }
+  .text-wrapper {
+    font-size: 1.6rem;
+  }
+  .slider_btns {
+    margin: 0 auto;
+  }
+}
