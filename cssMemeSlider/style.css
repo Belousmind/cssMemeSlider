@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
 
 html {
   font-size: 62.5%;
@@ -28,6 +29,8 @@ body {
 }
 
 .slider {
+
+  align-items: center;
   width: 80rem;
   text-align: center;
   overflow: hidden;
@@ -63,27 +66,36 @@ img {
   object-fit: contain;
 }
 
+/* сейчас работаю над стилем кнопок */
+
 .slider_btns {
   display: flex;
   gap: 2rem;
   margin-top: 2.5rem;
 }
-/* сейчас работаю над стилем кнопок */
-a {
+
+
+.slide_link {
+  cursor: pointer;
   display: block;
+  padding: 1.5rem;
+}
+
+.slider-btn {
   width: 1.5rem;
   height: 1.5rem;
   border: .4rem solid rgb(201, 201, 201);
   border-radius: 50%;
+  background-color: rgb(201, 201, 201);
 }
-a:hover {
+.slider-btn:hover {
   border-color: #fff;
-}
-
-a:active {
   background-color: #fff;
 }
 
 .text-wrapper {
   display: flex;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 2.4rem;
+  color: aliceblue;
 }
