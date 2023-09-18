@@ -94,41 +94,62 @@ input {
 .text {
   display: none;
   width: auto;
-  transition: all 1.3s ease-in-out;
 }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 /* text switcher */
 .a:checked ~ .text-btn-wrapper .text-wrapper .text1 {
   display: inline;
+  animation: fade-in .4s ease-out;
 }
 .b:checked ~ .text-btn-wrapper .text-wrapper .text2 {
   display: inline;
+  animation: fade-in .4s ease-out;
 }
 .c:checked ~ .text-btn-wrapper .text-wrapper .text3 {
   display: inline;
+  animation: fade-in .4s ease-out;
 }
 .d:checked ~ .text-btn-wrapper .text-wrapper .text4 {
   display: inline;
+  animation: fade-in .4s ease-out;
 }
 .e:checked ~ .text-btn-wrapper .text-wrapper .text5 {
   display: inline;
+  animation: fade-in .4s ease-out;
 }
 
 /* img switcher switcher */
 #btn1:checked ~ .slides {
   transform: translateX(0);
+  transition: all 0.4s ease-out;
 }
 #btn2:checked ~ .slides {
   transform: translateX(-100%);
+  transition: all 0.4s ease-out;
 }
 #btn3:checked ~ .slides {
   transform: translateX(-200%);
+  transition: all 0.4s ease-out;
 }
 #btn4:checked ~ .slides {
   transform: translateX(-300%);
+  transition: all 0.4s ease-out;
 }
 #btn5:checked ~ .slides {
   transform: translateX(-400%);
+  transition: all 0.4s ease-out;
 }
 
 /* button switcher */
