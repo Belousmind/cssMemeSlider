@@ -7,12 +7,24 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  background: linear-gradient(270deg, #64e8de, #8464eb);
+  background-size: 400% 400%;
+  animation: gradientAnimation 12s ease infinite;
+}
+@keyframes gradientAnimation {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
 }
 
 .slider-wrapper {
   width: 60%;
   margin: 5rem auto;
-  background-color: grey;
+  background: rgba( 255, 255, 255, 0.2 );
+  box-shadow: 0 .8rem 3.2rem 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( .75rem );
+  -webkit-backdrop-filter: blur( .75rem );
+  border-radius: 1rem;
 }
 
 .slider {
@@ -21,6 +33,7 @@ body {
   overflow: hidden;
   padding: 2.5rem;
   margin: 0 auto;
+
 }
 .slides {
   display: flex;
@@ -37,7 +50,6 @@ body {
   flex-shrink: 0;
   width: 80rem;
   height: 50rem;
-  background: #eee;
   transform-origin: center center;
   transform: scale(1);
   transition: transform 0.5s;
@@ -60,6 +72,6 @@ a {
   display: block;
   width: 1.5rem;
   height: 1.5rem;
-  border: .4rem solid #fff;
+  border: .4rem solid white;
   border-radius: 50%;
 }
