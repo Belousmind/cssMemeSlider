@@ -1,0 +1,40 @@
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.slider {
+  width: 80rem;
+  text-align: center;
+  overflow: hidden;
+  background-color: grey;
+  margin: 0 auto;
+}
+.slides {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+.slide {
+  width: 80rem;
+  text-align: center;
+}
+.slider_btns {
+  display: flex;
+  gap: 2rem;
+}
+a {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: .4rem solid #fff;
+  border-radius: 50%;
+}
