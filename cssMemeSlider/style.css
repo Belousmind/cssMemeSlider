@@ -66,6 +66,11 @@ img {
   object-fit: contain;
 }
 
+.text-btn-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* сейчас работаю над стилем кнопок */
 
 .slider_btns {
@@ -73,7 +78,6 @@ img {
   gap: 2rem;
   margin-top: 2.5rem;
 }
-
 
 .slide_link {
   cursor: pointer;
@@ -98,4 +102,39 @@ img {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 2.4rem;
   color: aliceblue;
+}
+
+label {
+  width: 3rem;
+  height: 3rem;
+  background-color: #fff;
+}
+
+input {
+  display: none;
+}
+
+.text {
+  display: none;
+  width: 400px;
+}
+
+.a:checked ~ .text-btn-wrapper .text-wrapper .text1 {
+  display: inline;
+}
+
+.b:checked ~ .text-btn-wrapper .text-wrapper .text2 {
+  display: inline;
+}
+
+.c:checked ~ .text-btn-wrapper .text-wrapper .text3 {
+  display: inline;
+}
+
+.d:checked ~ .text-btn-wrapper .text-wrapper .text4 {
+  display: inline;
+}
+
+.e:checked ~ .text-btn-wrapper .text-wrapper .text5 {
+  display: inline;
 }
