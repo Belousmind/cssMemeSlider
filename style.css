@@ -68,10 +68,22 @@ img {
   gap: 2rem;
   margin-top: 2.5rem;
 }
+/* сейчас работаю над стилем кнопок */
 a {
   display: block;
   width: 1.5rem;
   height: 1.5rem;
-  border: .4rem solid white;
+  border: .4rem solid rgb(201, 201, 201);
   border-radius: 50%;
+}
+a:hover {
+  border-color: #fff;
+}
+
+a:active {
+  background-color: #fff;
+}
+
+.text-wrapper {
+  display: flex;
 }
